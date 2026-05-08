@@ -1,0 +1,67 @@
+[versions]
+kotlin = "2.0.21"
+agp = "8.13.2"
+junit = "4.13.2"
+ktor = "2.3.12"
+livekit-android = "2.6.0"
+kotlinx-coroutines = "1.8.1"
+kotlinx-serialization = "1.7.1"
+compose-bom = "2024.09.02"
+lifecycle = "2.8.6"
+activity-compose = "1.9.2"
+core-ktx = "1.13.1"
+navigation = "2.8.4"
+
+[libraries]
+# Ktor
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+# Fix #7: HttpTimeout plugin required for cross-platform request timeout in KMP
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+
+# Testing
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+# KotlinX
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# Android
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+
+# Compose
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+
+# LiveKit
+livekit-android = { module = "io.livekit:livekit-android", version.ref = "livekit-android" }
+
+# Lottie for Compose (animated avatar support)
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version = "6.4.0" }
+
+# Coil for Compose (async image loading from URL)
+coil-compose = { module = "io.coil-kt:coil-compose", version = "2.7.0" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+android-application = { id = "com.android.application", version.ref = "agp" }

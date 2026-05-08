@@ -1,0 +1,20 @@
+# Gradle / Android
+.gradle/
+build/
+**/build/
+local.properties
+captures/
+.cxx/
+.externalNativeBuild/
+
+# IDE
+.idea/
+*.iml
+
+# Large / local artifacts (rebuild with ./gradlew assembleRelease)
+*.apk
+*.aab
+*.hprof
+
+# Debug pulls from device
+_pulled_snapshots/
